@@ -4,5 +4,7 @@
 =XML Logging=
 Example of XML logging in GLIntercept
 
+http://glintercept.googlecode.com/files/glixmlshot.gif
 
 =Shader Editor=
+http://glintercept.googlecode.com/files/shaderedit.png
