@@ -350,23 +350,15 @@ Windows XP with SP2
   of opening the main log file.
 
   Internet Explorer has no problems if you view the logs from a website.
-  (ie. from glintercept.nutty.org) 
 
 GLIntercept also relies on a conformant OpenGL implementation. Current known
 driver issues are:
 
 Nvidia Multi-Threadded driver
-- Nvidia's multi threadded driver seems to issue an internal wglGetPixelFormat
-  call on the first glGetError() after SwapBuffers. This internal call occurs 
-  on a different thread that does not have the main OpenGL conext - so it results
-  in the OpenGL error: 
-  "GL ERROR - Function wglGetPixelFormat generated error GL_INVALID_OPERATION"
-  for the first 23 times swap buffers is called. 
-  To fix, disable the multi-threadded driver from the Nvidia control panel:
-    "Manage 3D settings -> Threadded Optimization -> Off"
-  or you can enable the GLIntercept option "ThreadChecking = True" which will
-  report the extra wglGetPixelFormat call occuring on a different thread. 
-  (as well as some other wglDescribePixelFormat calls made by the driver)
+
+- Nvidia's multi threadded driver seems to issue an internal wglDescribePixelFormat/wglGetPixelFormat
+  calls on different threads - due to this logging of these methods has been disabled. 
+  (may be re-enabled if GLIntercept ever becomes multithreaded)
   
 Nvidia 69.xx
 
