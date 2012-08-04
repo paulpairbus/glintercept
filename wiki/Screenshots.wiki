@@ -1,6 +1,10 @@
 #summary Screenshots of GLIntercept usage
 #labels Featured
 
+=ARB_debug_output Logging=
+Example of logging the ARB_debug_output messages via the DebugContext plugin
+http://glintercept.googlecode.com/files/ARB_debug_output.png
+
 =XML Logging=
 Example of XML logging in GLIntercept
 http://glintercept.googlecode.com/files/glixmlshot.gif
