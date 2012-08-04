@@ -362,9 +362,13 @@ render. (This will affect the frame logger)
 GLIntercept also relies on a conformant OpenGL implementation. 
 
 Generated xml logs that use xsl will not display correctly in all browsers.
+
  - Firefox 3.0-13.0 - Works
+
  - Internet Explorer 9.0 - Works with allowing scripts on popup.
+
  - Google Chrome - Unable to run local scripts  
+
  
   A IEViewLog.hta application has been provided for IE users to use instead of opening the main log file.
 
