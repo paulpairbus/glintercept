@@ -2,8 +2,8 @@
 #labels Featured
 
  
-=GLIntercept v1.0=
-Copyright (c) 2011  Damian Trebilco  All rights reserved.
+=GLIntercept v1.1=
+Copyright (c) 2012  Damian Trebilco  All rights reserved.
 
 -----
 
@@ -42,6 +42,8 @@ Rename the file to gliConfig.ini before use:
 *gliConfig_FreeCam.ini* - Demonstrates how to use the OpenGL free camera plugin. (ctrl-shift-c starts the free camera see below for other key bindings)  
 
 *gliConfig_ShaderEdit.ini* - Demonstrates how to use the OpenGL shader editor plugin.(ctrl-shift-s starts the shader editor)  
+
+*gliConfig_DebugContext.ini* - Forced debug context with full ARB_debug_output logging. XML per-frame logging on ctrl-shift-f.
 
 *gliConfig_AuthorStd.ini* - Authors' preferred settings when developing.
 
@@ -284,7 +286,34 @@ PluginData
   }
 }
 }}}
-===3.6) C-Strike===
+
+
+
+===3.6) Debug Context - debug output===
+
+The Debug Context plugin was written to allow a user to force a debug context in OpenGL 3.0+ applications and report the logging reported by the extension ARB_debug_output. Config settings control what messages are reported and where the messages are logged. There is also an option to issue a debug breakpoint on each active message logged.
+
+(see the plugins' config.ini file for full details)
+
+Add the following lines to the gliConfig.ini to use the plugin.
+{{{
+PluginData
+{
+  ....
+
+  Plugins
+  {
+    DebugContext = ("GLDebugContext/GLDebugContext.dll")
+    {
+      //Other options controlling debug logging 
+
+    }
+  }
+}
+}}}
+
+
+===3.7) C-Strike===
 
 The C-Strike plugin was written to toggle rendering of different parts of
 origional Half-Life and CounterStrike games. This was written to "blue screen"
@@ -314,10 +343,12 @@ PluginData
 NOTE: GLIntercept will currently not handle multiple render contexts running 
 on multiple threads at the same time. See the above note in section 1.
 
-There are currently no known bugs in GLIntercept, however, the advanced 
-loggers (ie.image,shader) assume that all function calls are valid. For this 
-reason, ensure the application is free of OpenGL errors for correct usage of 
-these loggers.
+Also note that GLIntercept was written as a OpenGL 1.0-2.x debugger - 
+running with a pure context in OpenGL 3.0+ may make some features break.
+
+In GLIntercept, the advanced loggers (ie.image,shader) assume that all 
+function calls are valid. For this reason, ensure the application is 
+free of OpenGL errors for correct usage of these loggers.
 
 Possible bugs are expected in the advanced loggers if "unusual" work is done
 in display lists. (ie texture/shader creation or general operations that will
@@ -328,75 +359,14 @@ GLIntercept will also have trouble determining if a display list performs
 render calls if it calls another display list internally to perform the 
 render. (This will affect the frame logger)
 
-ARB GLSL Interface
+GLIntercept also relies on a conformant OpenGL implementation. 
 
-- The GLSL logger and editor have been updated to the OpenGL 2.0 interfaces.
-  As a result, a OpenGL 2.0 implementation is now needed to run these features.
-  If the old ARB interface is used, GLIntercept will still work as long as
-  the OpenGL 2.0 implementation will interact with the ARB implementation.
-  (both Nvidia and ATI do this)
-
-
-Windows XP with SP2 
-
-- Generated xml logs that use xsl will not display 
-  correctly using Internet Explorer (security warning). Either use an 
-  alternate browser (firefox) or enable enable java scripts to be run 
-  from the local harddrive: 
-  (Tools->Internet Options->Advanced->Security->Allow active content to run 
-  in files on My Computer)
-
-  A IEViewLog.hta application has been provided for IE users to use instead 
-  of opening the main log file.
-
-  Internet Explorer has no problems if you view the logs from a website.
-
-GLIntercept also relies on a conformant OpenGL implementation. Current known
-driver issues are:
-
-Nvidia Multi-Threadded driver
-
-- Nvidia's multi threadded driver seems to issue an internal wglDescribePixelFormat/wglGetPixelFormat
-  calls on different threads - due to this logging of these methods has been disabled. 
-  (may be re-enabled if GLIntercept ever becomes multithreaded)
-  
-Nvidia 69.xx
-
-- The GLSL reporting of uniform rectangle samplers is broken. Nvidia have 
-  stated a fix will be in later drivers.
-  Nvidia also have a bug where every uniform array value is reported as a 
-  seperate uniform. GLIntercept currently works around this issue.
-
-Nvidia 59.xx and earlier
-
-- The GLSL shader logger will crash the driver if you attempt to log the
-  current uniforms. This has been fixed in the 61.xx drivers.
-
-ATI Radeon Cat 4.1-5.10:
-
-- The GLSL shader logger will report GL errors if uniform logging is turned on
-  and samplers are contained inside the shaders. For some reason glGetUniform
-  does not work for sampler values and reports an error upon calling. Also 
-  note that due to this, the sampler values reported in the log will be 
-  incorrect.
-  This bug also affects the GLSL shader editor and logger but has been worked 
-  around in the latest GLIntercept. 
-
-ATI Radeon Cat 4.1:
-
-- glGetTexImage does not return the correct faces when retrieving cube maps.
-  This has been fixed in Cat 5.1
-
-- when using WGL_ARB_render_texture, calls to 
-  glGetIntegerv(GL_TEXTURE_BINDING_2D,&retVal); 
-  do not return the currently bound texture id when the texture is bound to
-  a p-buffer. It seems the driver is allocating a new texture internally when
-  the texture is bound to a p-buffer. GLIntercept will complain about a 
-  texture ID that is being used that was not created. The state of what 
-  textures are bound during a render call is also wrong in the log output 
-  because of this.
-  This has been fixed in Cat 5.1
-
+Generated xml logs that use xsl will not display correctly in all browsers.
+ - Firefox 3.0-13.0 - Works
+ - Internet Explorer 9.0 - Works with allowing scripts on popup.
+ - Google Chrome - Unable to run local scripts  
+ 
+  A IEViewLog.hta application has been provided for IE users to use instead of opening the main log file.
 
 
 ==5) Adding OpenGL extensions==
@@ -426,7 +396,7 @@ See readme.txt in the download for contact email
 
   GLIntercept from version 1.0+ uses the MIT License :
 
-  Copyright (c) 2010 Damian Trebilco
+  Copyright (c) 2012 Damian Trebilco
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
