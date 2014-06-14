@@ -1,1 +1,0 @@
-This directory contains the release binaries and source code archives of GLIntercept
