@@ -1,4 +1,5 @@
 #summary Downloads
+#labels Featured
 
 = Downloads =
 
