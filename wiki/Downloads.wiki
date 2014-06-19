@@ -14,13 +14,11 @@ The binaries are also hosted on Google Drive for easy downloading:
 For debugging 64 bit applications:
 [https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_NVhrelFVSExCYkk GLInterceptx64_1_3_0.exe]
 
-https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_NVhrelFVSExCYkk
-
 For debugging 32 bit applications:
-[https://drive.google.com/file/d/0B5weR-2QJx6_cjBwSXNtcm44aDQ/edit?usp=sharing GLIntercept_1_3_0.exe]
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_cjBwSXNtcm44aDQ GLIntercept_1_3_0.exe]
 
 Manual Install:
-[https://drive.google.com/file/d/0B5weR-2QJx6_MkFUWEZ5VXlYVE0/edit?usp=sharing GLIntercept_1_3_0_ManualInstall.zip]
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_MkFUWEZ5VXlYVE0 GLIntercept_1_3_0_ManualInstall.zip]
 
 Source
-[https://drive.google.com/file/d/0B5weR-2QJx6_eEx2X2pSNkFaUFk/edit?usp=sharing GLIntercept_1_3_0_src.7z]
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_eEx2X2pSNkFaUFk GLIntercept_1_3_0_src.7z]
