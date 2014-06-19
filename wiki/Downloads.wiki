@@ -8,6 +8,8 @@ Downloads of release binaries and source code archives are stored in the :
 
 = GLIntercept 1.3 direct links =
 
+[https://drive.google.com/folderview?id=0B5weR-2QJx6_VTFMcDdvcGRQclU&usp=sharing]
+
 For debugging 64 bit applications:
 [https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLInterceptx64_1_3_0.exe GLInterceptx64_1_3_0.exe]
 
