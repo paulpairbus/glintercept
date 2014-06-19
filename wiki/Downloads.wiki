@@ -11,6 +11,8 @@ Downloads of release binaries and source code archives are stored in the :
 For debugging 64 bit applications:
 [https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLInterceptx64_1_3_0.exe GLInterceptx64_1_3_0.exe]
 
+[http://glintercept.googlecode.com/svn/Downloads/1_3/GLInterceptx64_1_3_0.exe GLInterceptx64_1_3_0.exe]
+
 For debugging 32 bit applications:
 [https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLIntercept_1_3_0.exe GLIntercept_1_3_0.exe]
 
