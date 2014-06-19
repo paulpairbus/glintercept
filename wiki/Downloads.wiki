@@ -1,0 +1,20 @@
+#summary Downloads
+
+= Downloads =
+
+Downloads of release binaries and source code archives are stored in the :
+[https://code.google.com/p/glintercept/source/browse/#svn%2FDownloads SVN depot]
+
+= GLIntercept 1.3 direct links =
+
+For debugging 64 bit applications:
+[https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLInterceptx64_1_3_0.exe GLInterceptx64_1_3_0.exe]
+
+For debugging 32 bit applications:
+[https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLIntercept_1_3_0.exe GLIntercept_1_3_0.exe]
+
+Manual Install:
+[https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLIntercept_1_3_0_ManualInstall.zip GLIntercept_1_3_0_ManualInstall.zip]
+
+Source
+[https://code.google.com/p/glintercept/source/browse/Downloads/1_3/GLIntercept_1_3_0_src.7z GLIntercept_1_3_0_src.7z]
