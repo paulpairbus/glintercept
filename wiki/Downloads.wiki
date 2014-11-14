@@ -9,6 +9,22 @@ Downloads of release binaries and source code archives are stored in the :
 The binaries are also hosted on Google Drive for easy downloading:
 [https://drive.google.com/folderview?id=0B5weR-2QJx6_VTFMcDdvcGRQclU&usp=sharing Google Drive]
 
+
+= GLIntercept 1.3.1 direct links =
+
+For debugging 64 bit applications:
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_ekJLZk9HZ21pTzQ GLInterceptx64_1_3_1.exe]
+
+For debugging 32 bit applications:
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_alFOU3ZZcTUxZzg GLIntercept_1_3_1.exe]
+
+Manual Install:
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_eVB6UUk0TmxTaVU GLIntercept_1_3_1_ManualInstall.zip]
+
+Source
+[https://docs.google.com/uc?export=download&id=0B5weR-2QJx6_U3BsYVNCcDdTMUU GLIntercept_1_3_0_src.7z]
+
+
 = GLIntercept 1.3 direct links =
 
 For debugging 64 bit applications:
